@@ -8,6 +8,13 @@ Page({
 
   },
 
+  /*
+  点击自己的tab item的时候触发
+  只能在tabbar页面
+  */
+  onTabItemTap(e) {
+    console.log(e);
+  },
   /**
    * 生命周期函数--监听页面加载
    */
