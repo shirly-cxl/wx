@@ -1,0 +1,24 @@
+<!--pages/demo/icon/icon.wxml-->
+<view class="page">
+  <view>
+    <checkbox-group bindchange="checkBox" >
+      <checkbox  wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key="id" value="{{item.value}}">{{item.name}}</checkbox>
+    </checkbox-group>
+    <text>选中的水果{{checkList}}</text>
+  </view>
+
+  <view>
+    <radio-group bindchange="bindChange">
+      <radio color="red" value="male" checked>男</radio>
+      <radio color="red" value="female">女</radio>
+    </radio-group>
+    <text>您选中的是{{gender}}</text>
+  </view>
+
+  <icon type="success" size="35" color="#0094ff"></icon>
+  <icon type="cancel" size="35" color="#0094ff"></icon>
+  <view wx:for="{{iconType}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+    <icon type="{{item}}"></icon>
+  </view>
+
+</view>

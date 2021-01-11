@@ -1,0 +1,16 @@
+/* 
+  pages/demo/demo.wxss 
+  1rpx =0.5px 
+  
+*/
+@import "../../common/styles.wxss";
+
+  .width{
+    /* width:200rpx; */
+    width: calc(750rpx * 100 / 375);
+    height: 200rpx;
+    line-height: 200rpx;
+    background-color: #000;
+    color:#fff;
+    text-align: center;
+  }

@@ -1,0 +1,9 @@
+<!--pages/demo/custom/custom.wxml-->
+<view class="page">
+  <tabs tabs="{{tabs}}" binditemChange="handItemChange">
+    <block wx:if="{{tabs[0].isActive}}">父组件传递的内容1</block>
+    <block wx:elif="{{tabs[1].isActive}}" >父组件传递的内容2</block>
+    <block wx:elif="{{tabs[2].isActive}}">父组件传递的内容3</block>
+    <block wx:else="{{tabs[3].isActive}}" >父组件传递的内容4</block>
+  </tabs>
+</view>

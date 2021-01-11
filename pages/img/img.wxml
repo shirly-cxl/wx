@@ -1,0 +1,18 @@
+<!--pages/img/img.wxml-->
+<view>
+
+  <image class="img" src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=37978103,2154897732&fm=26&gp=0.jpg" mode="aspectFit"></image>
+
+  <swiper autoplay interval="3000" circular indicator-dots indicator-color="#0094ff" indicator-active-color="#ffff00">
+    <swiper-item>
+      <image src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=37978103,2154897732&fm=26&gp=0.jpg" mode="widthFix"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3616153279,2019486526&fm=15&gp=0.jpg" mode="widthFix"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2866050167,1803679091&fm=26&gp=0.jpg" mode="widthFix"></image>
+    </swiper-item>
+  </swiper>
+
+</view>
