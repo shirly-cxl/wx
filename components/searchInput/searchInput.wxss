@@ -1,0 +1,20 @@
+/*
+ components/searchInput/searchInput.wxss 
+ 1px = 2rpx
+*/
+
+.search{
+  height: 90rpx;
+  padding: 10rpx;
+  background-color: var(--themColor);
+}
+
+.search_input{
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 15rpx;
+  color: #666;
+}

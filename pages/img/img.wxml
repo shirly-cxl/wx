@@ -1,18 +1,24 @@
 <!--pages/img/img.wxml-->
-<view>
-
-  <image class="img" src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=37978103,2154897732&fm=26&gp=0.jpg" mode="aspectFit"></image>
-
-  <swiper autoplay interval="3000" circular indicator-dots indicator-color="#0094ff" indicator-active-color="#ffff00">
-    <swiper-item>
-      <image src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=37978103,2154897732&fm=26&gp=0.jpg" mode="widthFix"></image>
-    </swiper-item>
-    <swiper-item>
-      <image src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3616153279,2019486526&fm=15&gp=0.jpg" mode="widthFix"></image>
-    </swiper-item>
-    <swiper-item>
-      <image src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2866050167,1803679091&fm=26&gp=0.jpg" mode="widthFix"></image>
-    </swiper-item>
-  </swiper>
+<view class="cates">
+  <searchInput></searchInput>
+ 
+  <view class="contanier">
+    <scroll-view class="left_menu" scroll-y>
+      <view class="menu_item {{index1 === currentIndex ? 'active' : '' }}" wx:for="{{left}}"  wx:for-item="item1" wx:for-index="index1" wx:key="id" bindtap="handleTap" data-index1="{{index1}}">
+        {{item1}}
+      </view>
+    </scroll-view>
+    <scroll-view class="right_conent" scroll-y>
+      <view class="group" wx:for="{{right}}"  wx:for-item="item2" wx:for-index="index2" wx:key="index2">
+        <view class="title">{{item2.name}}</view>
+        <view class="list">
+          <navigator class="nav" wx:for="{{item2.childen}}"  wx:for-item="item3" wx:for-index="index3" wx:key="index3">
+            <image class="list_img" mode="widthFix" src="{{item3.img}}"></image>
+            <view class="title1">{{item3.name}}</view>
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
 
 </view>

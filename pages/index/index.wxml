@@ -2,15 +2,35 @@
   index.wxml
   https://www.bilibili.com/video/BV1KK411A7PZ
 -->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view class="">
+  <searchInput></searchInput>
+
+  <view class="swiper">
+    <swiper autoplay indicator-dots indicator-active-color="#fff">
+      <swiper-item wx:for="{{swiperList}}" wx:key="id">
+        <navigator>
+          <image mode="widthFix" src="{{item.url}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+
+  <view class="cate">
+    <navigator wx:for="{{cateList}}" wx:key="name" class="navigator">
+      <image mode="widthFix" src="{{item.img}}"></image>
+      <view class="text">{{item.name}}</view>
+    </navigator>
   </view>
+
+  <view class="floor">
+    <view class="group" wx:for="{{list}}" wx:for-item="item1" wx:for-index="index1" wx:key="id">
+      <view class="title">{{item1.name}}</view>
+      <view class="list">
+        <navigator wx:for="{{item1.prpList}}" wx:for-item="item2" wx:for-index="index2" wx:key="id" class="list-nav">
+          <image mode="{{index2 === 0 ? 'widthFix' : 'scaleToFill'}}" src="{{item2.img}}" class="img"></image>
+        </navigator>
+      </view>
+    </view>
+  </view>
+
 </view>

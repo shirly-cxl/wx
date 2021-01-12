@@ -1,4 +1,4 @@
-// pages/mine/mone.js
+// pages/cart/cart.js
 Page({
 
   /**

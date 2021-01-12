@@ -62,8 +62,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/demo/custom/custom",
-          "pathName": "pages/demo/custom/custom",
+          "name": "pages/img/img",
+          "pathName": "pages/img/img",
           "query": "",
           "scene": null
         }

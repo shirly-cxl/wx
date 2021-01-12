@@ -1,15 +1,17 @@
 /**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-} 
-
-.page{
+page,view,text,swiper,swiper-item,image,navigator{
   padding: 0;
-  margin: 10rpx 30rpx;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*主题颜色*/
+page{
+  /* 定义主题颜色 */
+  --themColor:#eb4450;
+  font-size:28rpx;
+}
+
+image{
+  width: 100%;
 }
