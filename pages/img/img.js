@@ -11,6 +11,8 @@ Page({
     right:[],
     //被点击左侧的菜单
     currentIndex:0,
+    //右侧内容的滚动条距离顶部的距离
+    scrollTop:0,
     message: [
     {
       id: 1,
@@ -230,14 +232,33 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getCate();
-      this.cate = this.data.message;
-      let left = this.cate.map(v => v.name);
-      let right = this.cate[0].childen;
-      this.setData({
-        left,
-        right
-      });
+    //获取本地存储中的数据
+    // const Cates =wx.getStorageSync("cates");
+    // if(!Cates){
+    //   //不存在则请求
+    //   this.getCate();
+    // }else{
+    //   //旧数据有没有过期
+    //   if(Date.now()-Cates.time > 1000 * 10){
+    //     this.getCate();
+    //   }else{
+    //     this.Cates = Cates.data;
+    //     let left = this.cate.map(v => v.name);
+    //     let right = this.cate[0].childen;
+    //     this.setData({
+    //       left,
+    //       right
+    //     });
+    //   }
+    // }
+
+    this.cate = this.data.message;
+    let left = this.cate.map(v => v.name);
+    let right = this.cate[0].childen;
+    this.setData({
+      left,
+      right
+    });
     // console.log();
   },
   handleTap(e){
@@ -245,8 +266,11 @@ Page({
     let right = this.cate[index1].childen;
     this.setData({
       currentIndex:index1,
-      right
+      right,
+      //重新设置scrollTop
+      scrollTop:0
     });
+
     console.log({index1});
   },
   getCate(){
@@ -254,8 +278,13 @@ Page({
     //   url:''
     // })
     // .then(res =>{
-    //   this.cate = res.data;
+    //   this.cate = res.data.message;
+    //   //把接口数据存入本地存储
+    //   wx.setStorageSync('cates', {time:Date.now(),data:this.cate});
+
+    //   //构造左侧数据
     //   let left = this.cate.map(v=> v.name);
+    //   //构造右侧数据
     //   let right = this.cate[0].childen;
     //   this.setData({
     //     left,

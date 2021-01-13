@@ -10,14 +10,16 @@
     "pages/demo/swiper/swiper",
     "pages/demo/button/button",
     "pages/demo/icon/icon",
-    "pages/demo/custom/custom"
+    "pages/demo/custom/custom",
+    "pages/img/list/list",
+    "pages/img/detail/detail"
   ],
   "window":{
     "backgroundTextStyle":"dark",
     "navigationBarBackgroundColor": "#eb4450",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "小程序",
     "navigationBarTextStyle":"white",
-    "backgroundColor": "#0fff00"
+    "backgroundColor": "#fff"
   },
   "style": "v2",
   "tabBar": {

@@ -1,0 +1,25 @@
+<!--pages/img/list/list.wxml-->
+<view>
+  <searchInput></searchInput>
+
+  <view>
+    <tabs tabs="{{tabs}}" binditemChange="handItemChange">
+      <block wx:if="{{tabs[0].isActive}}">
+        <view class="first">
+          <navigator class="item" wx:for="{{goods}}" wx:key="id" url="/pages/img/detail/detail?id={{item.id}}">
+            <view class="img">
+              <image class="images" mode="widthFix" src="{{item.img ? item.img :'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3679949460,2387365882&fm=26&gp=0.jpg'}}"></image>
+            </view>
+            <view class="info">
+              <view class="name">{{name ? name :'空'}}:{{item.name}}</view>
+              <view class="price">￥{{item.price}}</view>
+            </view>
+          </navigator>
+        </view>
+      </block>
+      <block wx:elif="{{tabs[1].isActive}}">父组件传递的内容2</block>
+      <block wx:elif="{{tabs[2].isActive}}">父组件传递的内容3</block>
+    </tabs>
+  </view>
+
+</view>

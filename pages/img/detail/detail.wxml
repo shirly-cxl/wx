@@ -1,0 +1,46 @@
+<!--pages/img/detail/detail.wxml-->
+<view>
+  <swiper class="swiper" autoplay indicator-dots circular >
+    <swiper-item wx:for="{{goodsObj.pic}}" wx:key="id" bindtap="prevewImge" data-url="{{item.img}}">
+      <image class="img" mode="widthFix" src="{{item.img}}"></image>
+    </swiper-item>
+  </swiper>
+
+  <view class="price">￥{{goodsObj.price}}</view>
+  <view class="row">
+    <view class="name">{{goodsObj.name}}</view>
+    <view class="collect">
+      <icon class="icon" type="success" size="25" color="#000"></icon>
+      <view>收藏</view>
+    </view>
+  </view>
+
+  <view>
+    <view class="title">图文详情</view>
+    <view class="info_cotent">
+      <!-- 富文本 -->
+      <!-- <rich-text nodes=""></rich-text> -->
+      <image class="src"  mode="widthFix" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3839779949,3283617444&fm=26&gp=0.jpg"></image>
+    </view>
+  </view>
+
+  <view class="footer">
+    <view class="item">
+      <image class="wechat" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3295443068,671266576&fm=15&gp=0.jpg"></image>
+      <view>客服</view>
+      <button class="btn" open-type="contact"></button>
+    </view>
+    <view class="item">
+      <image class="wechat" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=198688158,2423560950&fm=15&gp=0.jpg"></image>
+      <view>分享</view>
+      <button class="btn" open-type="share"></button>
+    </view>
+    <navigator class="item" url="/pages/cart/cart" open-type="switchTab">
+      <image class="wechat" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3852628855,2744975821&fm=26&gp=0.jpg"></image>
+      <view>购物车</view>
+    </navigator>
+    <view class="item cart">加入购物车</view>
+    <view class="item buy">立即购买</view>
+  </view>
+
+</view>
