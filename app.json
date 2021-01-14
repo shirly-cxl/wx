@@ -12,7 +12,8 @@
     "pages/demo/icon/icon",
     "pages/demo/custom/custom",
     "pages/img/list/list",
-    "pages/img/detail/detail"
+    "pages/img/detail/detail",
+    "pages/cart/pay/pay"
   ],
   "window":{
     "backgroundTextStyle":"dark",

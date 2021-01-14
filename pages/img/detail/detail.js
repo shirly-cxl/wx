@@ -9,6 +9,7 @@ Page({
       id:0,
       price:6666,
       name:'红红火火恍恍惚惚红红火火恍恍惚惚红红火火恍恍惚惚红红火火恍恍惚惚',
+      img:'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3738324299,1361227017&fm=26&gp=0.jpg',
       pic:[
         {
           id:0,
@@ -31,6 +32,7 @@ Page({
    */
   onLoad: function (options) {
     const {id} = options;
+    // this.goodsObj.id= options;
     console.log(id);
     this.goodsInfo =this.data.goodsObj;
   },
@@ -47,8 +49,36 @@ Page({
     console.log('放大预览');
     console.log(urls);
   },
+  //点击加入购物车
+  carAdd(){
+    //1.获取缓存中的购物车 数组
+    let cart=wx.getStorageSync("cart")||[];
+    //2.判断 商品对象是否存在于购物车数组中
+    let index=cart.findIndex(v=>v.id === this.goodsInfo.id);
+
+    if(index === -1){
+      //3.第一次添加
+      this.goodsInfo.num = 1;
+      this.goodsInfo.check = true;
+      cart.push(this.goodsInfo);
+      console.log('2222');
+    }else{
+      //4.已经存在购物车 执行 num++
+      cart[index].num++;
+      console.log('111');
+    }
+    //5.把购物车重新添加到缓存中
+    wx.setStorageSync("cart",cart);
+    //6.弹窗提示
+    wx.showToast({
+      title: '添加成功',
+      icon:"success",
+      mask:true,
+    });
+    console.log('加入购物车'+index);
+  },
   // getGoodDetail(id){
-  //   request({url:''})
+  //   request({url:'',data:{id}})
   //   .then(res=>{
   //     //如果接口返回的数据有一些不用到，如以下写法
   //     this.setData({

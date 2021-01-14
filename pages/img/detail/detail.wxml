@@ -39,7 +39,7 @@
       <image class="wechat" src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=3852628855,2744975821&fm=26&gp=0.jpg"></image>
       <view>购物车</view>
     </navigator>
-    <view class="item cart">加入购物车</view>
+    <view class="item cart" bindtap="carAdd">加入购物车</view>
     <view class="item buy">立即购买</view>
   </view>
 
