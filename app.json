@@ -13,7 +13,8 @@
     "pages/demo/custom/custom",
     "pages/img/list/list",
     "pages/img/detail/detail",
-    "pages/cart/pay/pay"
+    "pages/cart/pay/pay",
+    "pages/cart/order/order"
   ],
   "window":{
     "backgroundTextStyle":"dark",
