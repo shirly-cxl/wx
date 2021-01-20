@@ -9,8 +9,8 @@
   <view class="price">￥{{goodsObj.price}}</view>
   <view class="row">
     <view class="name">{{goodsObj.name}}</view>
-    <view class="collect">
-      <icon class="icon" type="success" size="25" color="#000"></icon>
+    <view class="collect" bindtap="handleCollect">
+      <icon type="success" size="25" color="{{isCollect ? 'red' : '#ccc'}}"></icon>
       <view>收藏</view>
     </view>
   </view>

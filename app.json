@@ -14,7 +14,8 @@
     "pages/img/list/list",
     "pages/img/detail/detail",
     "pages/cart/pay/pay",
-    "pages/cart/order/order"
+    "pages/cart/order/order",
+    "pages/mine/collect/collect"
   ],
   "window":{
     "backgroundTextStyle":"dark",

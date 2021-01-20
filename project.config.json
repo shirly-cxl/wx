@@ -62,8 +62,14 @@
     "miniprogram": {
       "list": [
         {
-          "name": "pages/cart/pay/pay",
-          "pathName": "pages/cart/pay/pay",
+          "name": "我的",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "商品详情",
+          "pathName": "pages/img/detail/detail",
           "query": "",
           "scene": null
         }

@@ -1,1 +1,137 @@
 /* pages/mine/mine.wxss */
+.bj_color{
+  background-color: #ddd;
+  min-height: 100vh;
+}
+
+.wrap{
+  height: 45vh;
+  overflow: hidden;
+  background-color: red;
+  position: relative;
+}
+
+.user_img{
+  position: relative;
+}
+
+.user_bj{
+  height: 50vh;
+  /* 高斯模糊 */
+  filter: blur(10rpx);
+}
+
+.user_info{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  text-align: center;
+}
+
+.user_icon{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
+
+.user_name{
+  color: #fff;
+  margin-top: 40rpx;
+  font-size: 40rpx;
+  font-weight: 600;
+}
+
+.user-btn{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40%;
+  color: #fff;
+  font-size: 38rpx;
+  text-align: center;
+}
+
+.user_content{
+  position: relative;
+  background-color: #ddd;
+  min-height: 80vh;
+}
+
+.user_main{
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -40rpx;
+  color: #666;
+}
+
+.history{
+  background-color: #fff;
+  display: flex;
+}
+
+.nav{
+  flex: 1;
+  text-align: center;
+  padding: 15rpx 0;
+}
+
+.his_num{
+  color: red;
+}
+
+.his_name{
+  color: #000;
+}
+
+.order{
+  background-color: #fff;
+  margin-top: 30rpx;
+}
+
+.order_title{
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+
+.order_content{
+  display: flex;
+}
+
+.info{
+  color: red;
+}
+
+.order_name{
+  color: #000;
+}
+
+.address{
+  background-color: #fff;
+  padding: 20rpx;
+  margin-top: 30rpx;
+}
+
+.app_info{
+  background-color: #fff;
+  margin-top: 30rpx;
+}
+
+.app_content{
+  display: flex;
+  justify-content: space-between;
+}
+
+.app_item{
+  padding: 20rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.recommend{
+  background-color: #fff;
+  padding: 20rpx;
+  margin-top: 30rpx;
+}

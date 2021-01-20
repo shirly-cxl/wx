@@ -5,65 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    userInfos:{},
+    collectNums:0,
   },
+  onShow() {
+    const userInfos = wx.getStorageSync('userInfo');
+    const collect = wx.getStorageSync('collect') || [];
 
-  /*
-  点击自己的tab item的时候触发
-  只能在tabbar页面
-  */
-  onTabItemTap(e) {
-    console.log(e);
+    this.setData({userInfos,collectNums:collect.length});
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  handGetUserInfo(e){
+    const {userInfo} = e.detail;
+    wx.setStorageSync('userInfo',userInfo);
+    console.log(userInfo);
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
   /**
    * 用户点击右上角分享
    */
