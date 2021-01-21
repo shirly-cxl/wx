@@ -72,6 +72,23 @@
           "pathName": "pages/img/detail/detail",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "商品收藏",
+          "pathName": "pages/mine/collect/collect",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "搜索",
+          "pathName": "pages/search/search",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "意见反馈",
+          "pathName": "pages/mine/feedback/feedback",
+          "scene": null
         }
       ]
     }

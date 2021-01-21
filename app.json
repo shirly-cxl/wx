@@ -15,7 +15,8 @@
     "pages/img/detail/detail",
     "pages/cart/pay/pay",
     "pages/cart/order/order",
-    "pages/mine/collect/collect"
+    "pages/mine/collect/collect",
+    "pages/mine/feedback/feedback"
   ],
   "window":{
     "backgroundTextStyle":"dark",

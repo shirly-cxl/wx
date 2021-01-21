@@ -1,2 +1,27 @@
 <!--pages/mine/collect/collect.wxml-->
-<text>pages/mine/collect/collect.wxml</text>
+<view>
+  <view>
+    <tabs tabs="{{tabs}}" binditemChange="handItemChange">
+      <view class="collect_main">
+        <view class="collect_title">
+          <text class="collect_tips active">全部</text>
+          <text class="collect_tips">正在热卖</text>
+          <text class="collect_tips">即将上线</text>
+        </view>
+        <view class="collect_content">
+          <navigator class="item" wx:for="{{collect}}" wx:key="id" url="/pages/img/detail/detail?id={{item.id}}">
+            <view class="img">
+              <image class="images" mode="widthFix"
+                src="{{item.img ? item.img :'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3679949460,2387365882&fm=26&gp=0.jpg'}}">
+              </image>
+            </view>
+            <view class="info">
+              <view class="name">{{name ? name :'hi'}}:{{item.name}}</view>
+              <view class="price">￥{{item.price}}</view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </tabs>
+  </view>
+</view>

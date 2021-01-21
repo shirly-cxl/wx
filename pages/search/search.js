@@ -5,62 +5,70 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    goods: [{
+        id: 0,
+        name: '啦啦啦，我是卖报的小行家，不怕大风大雨满街跑',
+      },
+      {
+        id: 1,
+        name: '啦啦啦，啦啦啦，我是卖报的小行家，不怕大风大雨满街跑',
+      },
+      {
+        id: 2,
+        name: '啦啦啦,啦啦啦，啦啦啦，我是卖报的小行家，不怕大风大雨满街跑',
+      },
+      {
+        id: 3,
+        name: '啦啦啦，我是卖报的小行家，不怕大风大雨满街跑',
+      },
+      {
+        id: 4,
+        name: '啦啦啦，啦啦啦，我是卖报的小行家，不怕大风大雨满街跑',
+      },
+      {
+        id: 5,
+        name: '啦啦啦,啦啦啦，啦啦啦，我是卖报的小行家，不怕大风大雨满街跑',
+      },
+    ],
+    isFous:false,
+    inValue:'',
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  //防抖（防止多次发送请求） 定义全局定时器
+  timeId: -1,
+  bandleInput(e) {
+    //1.获取输入框的值
+    const {
+      value
+    } = e.detail;
+    //2.检测合法性，trim去除字符串的头尾空格
+    if (!value.trim()) {
+      //不合法
+      this.setData({isFous:false,goods:[]});
+      return;
+    }
+    this.setData({isFous:true});
+    clearTimeout(this.timeId);
+    this.timeId = setTimeout(() => {
+      //3.发送请求
+      this.qsearch(value);
+    }, 1000);
+    console.log(e);
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  //发送请求获取搜索文字数据
+  qsearch(query) {
+    wx.request({
+      url: 'url',
+      data: {
+        query
+      },
+      success: (res) => {
+        console.log(res);
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  //
+  cancel(){
+    this.setData({inValue:'',isFous:false,goods:[]})
   }
+
 })

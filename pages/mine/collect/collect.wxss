@@ -1,1 +1,60 @@
 /* pages/mine/collect/collect.wxss */
+.collect_main{
+  background-color: #f3f4f6;
+  min-height: 100vh;
+}
+
+.collect_title{
+  padding: 40rpx 0;
+}
+
+.collect_tips{
+  padding: 15rpx;
+  border: 1px solid #ccc;
+  margin-left: 25rpx;
+  background-color: #fff;
+}
+
+.active{
+  color: red;
+  border-color: currentColor;
+}
+
+.item{
+  display: flex;
+  padding: 20rpx 20rpx;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.img{
+  flex:2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.images{
+  width: 70%;
+}
+
+.info{
+  flex:3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.name{
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  font-size: 28rpx;
+}
+
+.price{
+  color: var(--themColor);
+  font-size: 32rpx;
+}
