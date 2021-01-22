@@ -1,0 +1,19 @@
+/* pages/demo/form/form.wxss */
+page{
+  margin: 20rpx 40rpx;
+  font-size: 32rpx;
+}
+
+.section__title{
+  font-size: 40rpx;
+  font-weight: bold;
+  margin: 10rpx 0;
+}
+
+label{
+  margin: 0 10rpx;
+}
+
+button{
+  margin: 20rpx 0;
+}

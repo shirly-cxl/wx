@@ -1,0 +1,5 @@
+/* pages/demo/popup/popup.wxss */
+button{
+  margin: 40rpx;
+}
+

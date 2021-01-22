@@ -1,45 +1,11 @@
 <!--pages/demo/demo.wxml-->
 
 <view class="page">
-<view style="margin:20rpx">
-  <navigator url="/pages/demo/swiper/swiper">跳转到轮播图页面</navigator>
-</view>
-
-  <view>
-    <input type="text" bindinput="handInput" style=" border: 1px solid #000;" placeholder="{{num}}"/>
-    <button bindtap="handtap" data-open="{{1}}">+</button>
-    <button bindtap="handtap" data-open="{{-1}}">-</button>
-    <text>{{num}}</text>
+  <view class="demo" wx:for="{{list}}" wx:key="name">
+    <navigator class="demo_main" url="/pages/demo/{{item.url}}/{{item.url}}">
+      <view class="text">{{item.name}}</view>
+      <image class="img"
+        src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2527411007,3164767474&fm=26&gp=0.jpg"></image>
+    </navigator>
   </view>
-  
-  <text user-select>1.数组循环</text>
-  <!-- https://www.bilibili.com/video/BV1KK411A7PZ?p=24 -->
-  <view wx:for="{{list}}" wx:for-item="item" wx:for-index="index" wx:key="id">
-    <view>索引：{{index}}----名称：{{item.name}}</view>
-  </view>
-
-  <text>2.对象循环</text>
-  <view wx:for="{{person}}" wx:for-item="value" wx:for-index="key" wx:key="age">
-    <view>属性：{{key}}----值：{{value}}</view>
-  </view>
-  <block>block占位符的标签</block>
-
-  <view wx:if="{{true}}">wx:if显示</view>
-  <view wx:if="{{false}}">隐藏</view>
-  <view wx:if="{{false}}">1</view>
-  <view wx:elif="{{false}}">2</view>
-  <view wx:else>3</view>
-
-  <view hidden>hidden</view>
-  <view hidden="{{false}}">hidden隐藏</view>
-
-  <text>text相当于web中的span标签 -不会换行</text>
-  <view>view相当于web的div标签 -会换行</view>
-  <view>{{msg}}</view>
-  <view>{{person.age}}</view>
-  <view data-age="{{person.age}}">自定义属性</view>
-  <checkbox checked="{{ischeck}}"></checkbox>
-  <view>{{10%2 ==0 ? '偶数' :'基数'}}</view>
-
-  <view class="width">rpx</view>
 </view>

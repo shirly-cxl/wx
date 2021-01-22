@@ -1,3 +1,14 @@
+/*
+  富文本链接：https://blog.csdn.net/woyebuzhidao_1014/article/details/94433551
+  繁体字转换器： https://www.aies.cn/
+  PHP中文网：https://www.php.cn/php-weizijiaocheng-388737.html
+  VUE项目实现微信分享功能：https://www.jianshu.com/p/c8b55e64a45e
+  将上传的本地图片转换为网络图片: https://imgchr.com/
+  H5及web页面微信授权登录流程: https://www.jianshu.com/p/99caa82f1433?utm_campaign=hugo
+  RGB转16进制工具： https://m.fontke.com/tool/rgb/3d3d3d/   或  https://c.runoob.com/front-end/55
+  图片在线压缩工具: https://www.secaibi.com/tools/
+  一些开放的可以调用的API接口: https://blog.csdn.net/Candy_mi/article/details/90106040
+*/
 .page{
   margin: 0;
   padding: 10rpx 32rpx;

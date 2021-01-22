@@ -1,0 +1,23 @@
+<!--pages/demo/notice/notice.wxml-->
+<view>
+  <view class="title">利用swiper制作的公告</view>
+  <view class='adsec'>
+    <image class="img"
+      src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1754977205,3595343415&fm=26&gp=0.jpg"></image>
+    <text class='c_main fs_26'>公告：</text>
+    <swiper class="swiper_container" autoplay="true" circular="true" interval="4000">
+      <block wx:for="{{msgList}}" wx:key="title">
+        <!-- <navigator url="/pages/index/index?title={{item.url}}" open-type="navigate"> -->
+        <swiper-item>
+          <view class="swiper_item">{{item.title}}</view>
+        </swiper-item>
+        <!-- </navigator> -->
+      </block>
+    </swiper>
+  </view>
+
+  <view class="title">利用css的animation属性制作的公告</view>
+  <view class='scroll_view_border'>
+    <view class="srcoll_view">这武器那都好，就是不吃药只能战斗15秒，15秒内不是你死就是我亡，这才是90级史诗该有的王者风范!</view>
+  </view>
+</view>

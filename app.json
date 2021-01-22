@@ -16,7 +16,12 @@
     "pages/cart/pay/pay",
     "pages/cart/order/order",
     "pages/mine/collect/collect",
-    "pages/mine/feedback/feedback"
+    "pages/mine/feedback/feedback",
+    "pages/demo/basic/basic",
+    "pages/demo/sort/sort",
+    "pages/demo/popup/popup",
+    "pages/demo/form/form",
+    "pages/demo/notice/notice"
   ],
   "window":{
     "backgroundTextStyle":"dark",
@@ -46,6 +51,10 @@
       {
         "pagePath": "pages/mine/mine",
         "text": "我的"
+      },
+      {
+        "pagePath": "pages/demo/demo",
+        "text": "基础知识"
       }
     ]
   },

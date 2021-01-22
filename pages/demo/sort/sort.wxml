@@ -1,0 +1,10 @@
+<!--pages/demo/sort/sort.wxml-->
+<view>
+  <view class="row">
+    <button bindtap="mySort" data-property="id">根据id排序</button>
+    <button bindtap="mySort" data-property="age">根据年龄排序</button>
+  </view>
+  <view wx:for="{{arr}}" wx:key="id" wx:for-item="item" data-id="{{item.id}}">
+    <view class="name">{{item.name}}</view>
+  </view>
+</view>
