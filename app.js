@@ -2,7 +2,7 @@
 App({
   //应用第一次启动的就会触发的事件
   onLaunch() {
-  
+    console.log('onLaunch');
   },
   globalData: {
    

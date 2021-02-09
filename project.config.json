@@ -86,8 +86,8 @@
           "scene": null
         },
         {
-          "name": "意见反馈",
-          "pathName": "pages/mine/feedback/feedback",
+          "name": "pages/demo/audio/audio",
+          "pathName": "pages/demo/audio/audio",
           "query": "",
           "scene": null
         }

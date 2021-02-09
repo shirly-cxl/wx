@@ -1,0 +1,5 @@
+/* pages/demo/mapDemo/mapDemo.wxss */
+.mapSize{
+  width: 100%;
+  height: 600rpx;
+}

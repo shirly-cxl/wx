@@ -7,6 +7,22 @@ Page({
   data: {
     list:[
       {
+        name:'地图',
+        url:'mapDemo'
+      },
+      {
+        name:'音乐',
+        url:'audio'
+      },
+      {
+        name:'视频',
+        url:'video'
+      },
+      {
+        name:'下拉列表',
+        url:'dropDown'
+      },
+      {
         name:'公告',
         url:'notice'
       },

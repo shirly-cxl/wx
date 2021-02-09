@@ -1,0 +1,6 @@
+/* pages/demo/dropDown/dropDown.wxss */
+.container{
+  width: 50%;
+  height: 100px;
+  margin: 20rpx auto;
+}

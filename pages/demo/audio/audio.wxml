@@ -1,0 +1,28 @@
+<!--pages/demo/audio/audio.wxml-->
+<view>
+  <audio id="myAudio" style="display:none;" controls loop src="{{src}}" bindtimeupdate="timeupdate"></audio>
+  <view class="aduio-wrap">
+    <view>致爱丽丝</view>
+    <view>专辑-演唱者</view>
+  </view>
+  <view class="qudong">
+    <view class="big">
+      <image class="small" style="animation-play-state: {{play_staus ? 'running' :'paused'}};"
+        src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=751406143,2617552329&fm=26&gp=0.jpg"></image>
+    </view>
+  </view>
+  <view class="controller">
+    <view class="prg">
+      <text>00:00</text>
+      <progress percent="60" color="red" stroke-width="4"></progress>
+      <text>05:00</text>
+    </view>
+    <view class="controller1">
+      <view>循环</view>
+      <view>上一曲</view>
+      <view bindtap="onplay">{{play_staus ?'暂停' :'播放'}}</view>
+      <view>下一曲</view>
+      <view>分享</view>
+    </view>
+  </view>>
+</view>

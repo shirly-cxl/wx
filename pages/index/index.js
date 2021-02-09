@@ -136,6 +136,7 @@ Page({
     //   complete:()=>{}
     // });
    this.getSwiper();
+   console.log("onLoad");
   },
   getSwiper(){
     // request({url:''}).then(result=>{
@@ -144,4 +145,10 @@ Page({
     //   });
     // }).then();
   },
+  onReady(){
+    console.log("onReady");
+  },
+  onShow(){
+    console.log("onShow");
+  }
 })
