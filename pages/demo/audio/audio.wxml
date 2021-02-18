@@ -1,6 +1,7 @@
 <!--pages/demo/audio/audio.wxml-->
 <view>
-  <audio id="myAudio" style="display:none;" controls loop src="{{src}}" bindtimeupdate="timeupdate"></audio>
+  <audio id="myAudio" style="display:none;" controls loop="{{play_modules[play_modules_index] == '单曲' ? true : false}}"
+   src="{{src}}" bindtimeupdate="timeupdate"></audio>
   <view class="aduio-wrap">
     <view>致爱丽丝</view>
     <view>专辑-演唱者</view>
@@ -13,16 +14,17 @@
   </view>
   <view class="controller">
     <view class="prg">
-      <text>00:00</text>
-      <progress percent="60" color="red" stroke-width="4"></progress>
-      <text>05:00</text>
+      <text>{{play_time}}</text>
+      <progress percent="{{present}}" color="red" stroke-width="4"></progress>
+      <text>{{music_time}}</text>
     </view>
     <view class="controller1">
-      <view>循环</view>
+      <view bindtap="changeMod">{{play_modules[play_modules_index]}}</view>
       <view>上一曲</view>
       <view bindtap="onplay">{{play_staus ?'暂停' :'播放'}}</view>
-      <view>下一曲</view>
+      <view bindtap="next">下一曲</view>
       <view>分享</view>
     </view>
   </view>>
 </view>
+<!-- https://www.bilibili.com/video/BV1t7411y7qX?p=5&spm_id_from=pageDriver -->
