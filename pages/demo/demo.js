@@ -7,7 +7,7 @@ Page({
   data: {
     list:[
       {
-        name:'电影模板',
+        name:'商品列表模板（下拉加载）',
         url:'film'
       },
       {

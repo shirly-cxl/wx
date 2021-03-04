@@ -1,2 +1,16 @@
 <!--pages/demo/film/film.wxml-->
-<text>pages/demo/film/film.wxml</text>
+<view>
+  <view>
+    <swiper class="banner" autoplay interval="3000" indicator-dots>
+      <swiper-item wx:for="{{banners}}" wx:key="id">
+        <image src="{{item.image_src}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="list" wx:for="{{goodList}}" wx:key="id">
+    <view class="film_img">
+      <image src="{{item.goods_big_logo ? item.goods_big_logo : 'https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2853553659,1775735885&fm=26&gp=0.jpg'}}"></image>
+    </view>
+    <view class="name">{{item.goods_name}}</view>
+  </view>
+</view>
