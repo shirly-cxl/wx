@@ -7,6 +7,14 @@ Page({
   data: {
     list:[
       {
+        name:'电影模板',
+        url:'film'
+      },
+      {
+        name:'新闻模板',
+        url:'news'
+      },
+      {
         name:'地图',
         url:'mapDemo'
       },

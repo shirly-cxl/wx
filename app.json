@@ -25,7 +25,10 @@
     "pages/demo/dropDown/dropDown",
     "pages/demo/mapDemo/mapDemo",
     "pages/demo/video/video",
-    "pages/demo/audio/audio"
+    "pages/demo/audio/audio",
+    "pages/demo/news/news",
+    "pages/demo/newsDetail/newsDetail",
+    "pages/demo/film/film"
   ],
   "window":{
     "backgroundTextStyle":"dark",

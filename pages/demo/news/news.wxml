@@ -1,0 +1,22 @@
+<!--pages/demo/news/news.wxml-->
+<view>
+  <view>
+    <swiper class="banner" indicator-dots="true" autoplay="true">
+      <swiper-item wx:for="{{bannerImgs}}" wx:key="item.id">
+        <image src="{{item}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="new_list">
+    <view class="item" wx:for="{{newsList}}" wx:key="item.id" bindtap="openNews" data-index="{{index}}">
+      <view class="item_header">
+        <image class="autor" src="{{item.writersUrl}}"></image>
+        <text class="name">{{item.writers}}</text>
+        <text class="time">发表于{{item.publishDateStr}}</text>
+      </view>
+      <text class="new_title">{{item.title}}</text>
+      <image class="news_img" src="{{item.newsUrl}}"></image>
+      <text class="news_des">{{item.description}}</text>
+    </view>
+  </view>
+</view>
