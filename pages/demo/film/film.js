@@ -6,7 +6,7 @@ Page({
    */
   data: {
     banners:[],
-    goodList:[]
+    goodList:[],
   },
   QueryParams:{
     query:"",
@@ -22,7 +22,7 @@ Page({
     this.getBanners();
     this.getGoods();
   },
-  getBanners:function(){
+  getBanners(){
     wx.request({
       url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata',
       success:(data) =>{
@@ -35,17 +35,23 @@ Page({
       }
     });
   },
-  getGoods:function(){
+  getGoods(){
+    wx.showLoading({
+      title: '加载中...',
+      icon:'none'
+    });
     wx.request({
       url: 'https://api-hmugo-web.itheima.net/api/public/v1/goods/search',
       data:this.QueryParams,
       success:(res) =>{
-        this.goodList = res.data.message.goods;
+        // this.goodList = res.data.message.goods;
         const total = res.data.message.total;
         this.total = Math.ceil( total / this.QueryParams.pagesize);
         this.setData({
-          goodList:[...this.goodList, ...res.data.message.goods]
-        })
+          goodList:[...this.data.goodList, ...res.data.message.goods]
+        });
+        wx.stopPullDownRefresh();
+        wx.hideLoading();
         console.log(res);
       }
     })
@@ -53,14 +59,18 @@ Page({
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
-
+  onPullDownRefresh () {
+    this.setData({
+      goodList:[]
+    });
+    this.QueryParams.pagenum = 1;
+    this.getGoods();
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom() {
     if(this.QueryParams.pagenum >= this.total){
       wx.showToast({
         title: '没有数据了',
@@ -72,11 +82,4 @@ Page({
     }
     console.log('res');
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })
