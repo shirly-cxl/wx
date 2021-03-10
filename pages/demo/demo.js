@@ -7,6 +7,10 @@ Page({
   data: {
     list:[
       {
+        name:'弹出框popover',
+        url:'mypopover'
+      },
+      {
         name:'商品列表模板（下拉加载）',
         url:'film'
       },

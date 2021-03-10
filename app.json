@@ -28,7 +28,8 @@
     "pages/demo/audio/audio",
     "pages/demo/news/news",
     "pages/demo/newsDetail/newsDetail",
-    "pages/demo/film/film"
+    "pages/demo/film/film",
+    "pages/demo/mypopover/mypopover"
   ],
   "window":{
     "backgroundTextStyle":"dark",

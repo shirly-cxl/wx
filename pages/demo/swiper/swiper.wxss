@@ -13,3 +13,8 @@ swiper{
 image{
   width: 100%;
 }
+
+.banner{
+  padding: 0 5px;
+  box-sizing: border-box;
+}
