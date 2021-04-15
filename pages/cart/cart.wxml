@@ -38,7 +38,7 @@
         </view>
       </block>
       <block wx:else>
-        <image mode="widthFix" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1495549002,2092677697&fm=26&gp=0.jpg"></image>
+        <image class="dh" mode="widthFix" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1495549002,2092677697&fm=26&gp=0.jpg"></image>
       </block>
     </view>
   </view>

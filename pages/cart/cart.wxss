@@ -138,3 +138,12 @@
 page{
   padding-bottom: 90rpx;
 }
+
+.dh{
+  animation: dhs linear 1s infinite alternate ;
+}
+
+@keyframes dhs{
+  0%,50%,100%{opacity: 1;}
+  25%{opacity: 0;}
+}
